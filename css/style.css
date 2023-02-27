@@ -87,6 +87,34 @@ textarea {
     white-space: nowrap;
 }
 
+.main-thd-div .radio-btn {
+    display: flex;
+    padding: 10px 0;
+    gap: 10px;
+    width: 50%;
+}
+
+.radio-btn label {
+    white-space: nowrap;
+}
+
+.main-thd-div .radio-btn>input {
+    margin-left: 10px;
+    width: 17px;
+}
+
+.main-thd-div .checkbox-btn {
+    display: flex;
+    width: 17px;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.main-thd-div .checkbox-btn>input,
+label {
+    margin-left: 10px;
+}
+
 .instruction p {
     color: red;
     text-transform: uppercase;
