@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    margin-top: 5px;
+    background-color: black;
+}
+
+.main-div {
+    width: 70%;
+    background-color: bisque;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px 10px;
+}
+
+.info-about {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-about .personal h3 {
+    padding: 10px 20px;
+    background-color: cadetblue;
+}
+
+.info-about .only-box {
+    background-color: #800000;
+    height: 42px;
+    width: 42px;
+    margin-left: 10px;
+}
+
+.main-sec-div {
+    display: flex;
+    align-items: center;
+    /* padding: 0 10px; */
+}
+
+.main-sec-div label {
+    /* width: 100px; */
+    white-space: nowrap;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: bisque;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-thd-div {
+    display: flex;
+    /* padding: 0 10px; */
+}
+
+.main-thd-fst-div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.main-thd-fst-div>label {
+    /* width: 20%; */
+    white-space: nowrap;
+}
+
+.main-thd-scd-div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.main-thd-scd-div>label {
+    /* width: 20%; */
+    white-space: nowrap;
+}
+
+.instruction p {
+    color: red;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.notice p {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-btn button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-color: #007bff;
+    border-radius: 10px 10px;
+}
+
+.submit-btn button:hover {
+    background-color: #800000;
+    border-color: #800000;
+    transition: 1s;
+}
+
+
+/* CSS for autocomplete field change color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px bisque inset !important;
+}
+
+
+/* Style For Showdata Page */
+
+.title {
+    margin: 20px 0;
+}
+
+.title h3 {
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    text-align: left;
+}
+
+table th {
+    width: 30%;
+}
+
+table td {
+    width: 70%;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+.clear-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+.clear-btn button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-color: #007bff;
+    border-radius: 10px 10px;
+}
+
+.clear-btn button:hover {
+    background-color: #800000;
+    border-color: #800000;
+    transition: 1s;
+}
+
+
+/* end style for Showdata Page */
+
+
+/* media queries */
+
+
+/* for small screen */
+
+@media only screen and (max-width: 768px) {
+    input,
+    textarea {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .submit-btn button {
+        font-size: 16px;
+        padding: 8px 25px;
+    }
+}
