@@ -1,30 +1,33 @@
-const form = document.getElementById('form');
-const name = document.getElementById('name');
-const office = document.getElementById('office');
-const residency = document.getElementById('residency');
-const fstmobileno = document.getElementById('fstmobileno');
-const fsttelephone = document.getElementById('fsttelephone');
-const email = document.getElementById('email');
-const adharno = document.getElementById('adharno');
-const gstin = document.getElementById('gstin');
-const vehicleno = document.getElementById('vehicleno');
-const dlno = document.getElementById('dlno');
-const bankac = document.getElementById('bankac');
-const accountno = document.getElementById('accountno');
-const debitcardno = document.getElementById('debitcardno');
-const creditcardno = document.getElementById('creditcardno');
-const passportno = document.getElementById('passportno');
-const panno = document.getElementById('panno');
-const gender = document.getElementById('gender');
-const bloodgroup = document.getElementById('bloodgroup');
-const secname = document.getElementById('secname');
-const scdmobileno = document.getElementById('scdmobileno');
-const sectelephone = document.getElementById('sectelephone');
-const relation = document.getElementById('relation');
-
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-
+    const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const office = document.getElementById('office');
+    const residency = document.getElementById('residency');
+    const fstmobileno = document.getElementById('fstmobileno');
+    const fsttelephone = document.getElementById('fsttelephone');
+    const email = document.getElementById('email');
+    const adharno = document.getElementById('adharno');
+    const gstin = document.getElementById('gstin');
+    const vehicleno = document.getElementById('vehicleno');
+    const dlno = document.getElementById('dlno');
+    const bankac = document.getElementById('bankac');
+    const accountno = document.getElementById('accountno');
+    const debitcardno = document.getElementById('debitcardno');
+    const creditcardno = document.getElementById('creditcardno');
+    const passportno = document.getElementById('passportno');
+    const panno = document.getElementById('panno');
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const language = document.querySelectorAll('input[name="language"]:checked');
+    const languageArr=[];
+    for (let i = 0; i < language.length; i++) {
+        languageArr.push(language[i].value);
+    }
+    const bloodgroup = document.getElementById('bloodgroup');
+    const secname = document.getElementById('secname');
+    const scdmobileno = document.getElementById('scdmobileno');
+    const sectelephone = document.getElementById('sectelephone');
+    const relation = document.getElementById('relation');
 
     // Validations
 
@@ -56,18 +59,18 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for mobile number
-    var Mobile = document.getElementById('fstmobileno').value;
-    if (Mobile == "") {
+    var MobileNo = document.getElementById('fstmobileno').value;
+    if (MobileNo == "") {
         alert("Please Enter Mobile Number");
         document.getElementById('fstmobileno').focus();
         return false;
     }
-    if (isNaN(Mobile)) {
+    if (isNaN(MobileNo)) {
         alert("Enter the Valid Mobile Number(Like : 9876543211)...");
         document.getElementById('fstmobileno').focus();
         return false;
     }
-    if ((Mobile.length < 10) || (Mobile.length > 10)) {
+    if ((MobileNo.length < 10) || (MobileNo.length > 10)) {
         alert("Mobile Number Must Be Contain 10 Digits.");
         document.getElementById('fstmobileno').focus;
         return false;
@@ -105,18 +108,18 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for adharcard number
-    var Adhar = document.getElementById('adharno').value;
+    var AdharcardNo = document.getElementById('adharno').value;
     if (document.getElementById('adharno').value == "") {
         alert("Enter Valid Adhar Card Number.");
         document.getElementById('adharno').focus();
         return false;
     }
-    if (isNaN(Adhar)) {
+    if (isNaN(AdharcardNo)) {
         alert("Enter the Valid Adharcard Number That contain Only Numeric Number.");
-        document.getElementById('fsttelephone').focus();
+        document.getElementById('adharno').focus();
         return false;
     }
-    if ((Adhar.length < 12) || (Adhar.length > 12)) {
+    if ((AdharcardNo.length < 12) || (AdharcardNo.length > 12)) {
         alert("Adhar Card Must Be Contain 12 Digits.");
         document.getElementById('adharno').focus;
         return false;
@@ -163,16 +166,28 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for debitcard
+    var DebitcardNo = document.getElementById('debitcardno').value;
     if (document.getElementById('debitcardno').value == "") {
         alert("Enter Debit Card Number.");
         document.getElementById('debitcardno').focus();
         return false;
     }
+     if ((DebitcardNo.length < 16) || (DebitcardNo.length > 16)) {
+        alert("Debit Card Number Must Be Contain 16 Digits.");
+        document.getElementById('debitcardno').focus;
+        return false;
+    }
 
     // validation for credit card
+    var CreditcardNo = document.getElementById('creditcardno').value;
     if (document.getElementById('creditcardno').value == "") {
         alert("Enter Credit Card Number.");
         document.getElementById('creditcardno').focus();
+        return false;
+    }
+    if ((CreditcardNo.length < 16) || (CreditcardNo.length > 16)) {
+        alert("Credit Card Number Must Be Contain 16 Digits.");
+        document.getElementById('creditcardno').focus;
         return false;
     }
 
@@ -272,6 +287,7 @@ form.addEventListener('submit', function(e) {
     const passportnoValue = passportno.value;
     const pannoValue = panno.value;
     const genderValue = gender.value;
+    const languageValue = languageArr;
     const bloodgroupValue = bloodgroup.value;
     const secnameValue = secname.value;
     const scdmobilenoValue = scdmobileno.value;
@@ -295,7 +311,8 @@ form.addEventListener('submit', function(e) {
     localStorage.setItem('creditcardno', creditcardnoValue);
     localStorage.setItem('passportno', passportnoValue);
     localStorage.setItem('panno', pannoValue);
-    localStorage.setItem('gender', genderValue);
+    localStorage.setItem('gender',genderValue);
+    localStorage.setItem('language',languageValue);
     localStorage.setItem('bloodgroup', bloodgroupValue);
     localStorage.setItem('secname', secnameValue);
     localStorage.setItem('scdmobileno', scdmobilenoValue);

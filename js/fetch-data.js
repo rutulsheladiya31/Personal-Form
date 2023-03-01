@@ -15,6 +15,7 @@ const creditcardno = localStorage.getItem('creditcardno');
 const passportno = localStorage.getItem('passportno');
 const panno = localStorage.getItem('panno');
 const gender = localStorage.getItem('gender');
+const language = localStorage.getItem('language');
 const bloodgroup = localStorage.getItem('bloodgroup');
 const secname = localStorage.getItem('secname');
 const scdmobileno = localStorage.getItem('scdmobileno');
@@ -37,7 +38,8 @@ document.getElementById('debitcardno').textContent = debitcardno;
 document.getElementById('creditcardno').textContent = creditcardno;
 document.getElementById('passportno').textContent = passportno;
 document.getElementById('panno').textContent = panno;
-document.getElementById('gender').textContent = gender;
+document.getElementById('gender').textContent=gender;
+document.getElementById('language').textContent=language;
 document.getElementById('bloodgroup').textContent = bloodgroup;
 document.getElementById('secname').textContent = secname;
 document.getElementById('secmobileno').textContent = scdmobileno;
@@ -49,14 +51,6 @@ function cleardata() {
     console.log("clear");
     location.reload();
 }
-
-
-{
-    /* <script>
-    function removename() {
-        localStorage.removeItem("name");
-        console.log("clear");
-        location.reload();
-    }
-    </script> */
+function goback(){
+    window.location.href = "index.html";
 }
