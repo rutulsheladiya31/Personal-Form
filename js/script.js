@@ -59,36 +59,36 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for mobile number
-    var MobileNo = document.getElementById('fstmobileno').value;
-    if (MobileNo == "") {
+    var mobileNo = document.getElementById('fstmobileno').value;
+    if (mobileNo == "") {
         alert("Please Enter Mobile Number");
         document.getElementById('fstmobileno').focus();
         return false;
     }
-    if (isNaN(MobileNo)) {
+    if (isNaN(mobileNo)) {
         alert("Enter the Valid Mobile Number(Like : 9876543211)...");
         document.getElementById('fstmobileno').focus();
         return false;
     }
-    if ((MobileNo.length < 10) || (MobileNo.length > 10)) {
+    if ((mobileNo.length < 10) || (mobileNo.length > 10)) {
         alert("Mobile Number Must Be Contain 10 Digits.");
         document.getElementById('fstmobileno').focus;
         return false;
     }
 
     // validation for telephone number
-    var TelephoneNo = document.getElementById('fsttelephone').value;
-    if (TelephoneNo == "") {
+    var telephoneNo = document.getElementById('fsttelephone').value;
+    if (telephoneNo == "") {
         alert("Enter Telephone Number.");
         document.getElementById('fsttelephone').focus();
         return false;
     }
-    if (isNaN(TelephoneNo)) {
+    if (isNaN(telephoneNo)) {
         alert("Enter the Valid Telephone Number Number(Like:123-456-78)...");
         document.getElementById('fsttelephone').focus();
         return false;
     }
-    if ((TelephoneNo.length < 8) || (TelephoneNo.length > 8)) {
+    if ((telephoneNo.length < 8) || (telephoneNo.length > 8)) {
         alert("Telephone Number Must Be Contain 8 Digits.");
         document.getElementById('fsttelephone').focus;
         return false;
@@ -108,18 +108,18 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for adharcard number
-    var AdharcardNo = document.getElementById('adharno').value;
+    var adharCardNo = document.getElementById('adharno').value;
     if (document.getElementById('adharno').value == "") {
         alert("Enter Valid Adhar Card Number.");
         document.getElementById('adharno').focus();
         return false;
     }
-    if (isNaN(AdharcardNo)) {
+    if (isNaN(adharCardNo)) {
         alert("Enter the Valid Adharcard Number That contain Only Numeric Number.");
         document.getElementById('adharno').focus();
         return false;
     }
-    if ((AdharcardNo.length < 12) || (AdharcardNo.length > 12)) {
+    if ((adharCardNo.length < 12) || (adharCardNo.length > 12)) {
         alert("Adhar Card Must Be Contain 12 Digits.");
         document.getElementById('adharno').focus;
         return false;
@@ -166,26 +166,26 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for debitcard
-    var DebitcardNo = document.getElementById('debitcardno').value;
+    var debitCardNo = document.getElementById('debitcardno').value;
     if (document.getElementById('debitcardno').value == "") {
         alert("Enter Debit Card Number.");
         document.getElementById('debitcardno').focus();
         return false;
     }
-     if ((DebitcardNo.length < 16) || (DebitcardNo.length > 16)) {
+     if ((debitCardNo.length < 16) || (debitCardNo.length > 16)) {
         alert("Debit Card Number Must Be Contain 16 Digits.");
         document.getElementById('debitcardno').focus;
         return false;
     }
 
     // validation for credit card
-    var CreditcardNo = document.getElementById('creditcardno').value;
+    var creditCardNo = document.getElementById('creditcardno').value;
     if (document.getElementById('creditcardno').value == "") {
         alert("Enter Credit Card Number.");
         document.getElementById('creditcardno').focus();
         return false;
     }
-    if ((CreditcardNo.length < 16) || (CreditcardNo.length > 16)) {
+    if ((creditCardNo.length < 16) || (creditCardNo.length > 16)) {
         alert("Credit Card Number Must Be Contain 16 Digits.");
         document.getElementById('creditcardno').focus;
         return false;
@@ -226,18 +226,18 @@ form.addEventListener('submit', function(e) {
     }
 
     // validation for mobile number
-    var secMobile = document.getElementById('scdmobileno').value;
-    if (secMobile == "") {
+    var secMobileNo = document.getElementById('scdmobileno').value;
+    if (secMobileNo == "") {
         alert("Please Enter Mobile Number");
         document.getElementById('scdmobileno').focus();
         return false;
     }
-    if (isNaN(secMobile)) {
+    if (isNaN(secMobileNo)) {
         alert("Enter the Valid Mobile Number(Like : 9876543211)...");
         document.getElementById('scdmobileno').focus();
         return false;
     }
-    if ((secMobile.length < 10) || (secMobile.length > 10)) {
+    if ((secMobileNo.length < 10) || (secMobileNo.length > 10)) {
         alert("Mobile Number Must Be Contain 10 Digits.");
         document.getElementById('scdmobileno').focus;
         return false;
